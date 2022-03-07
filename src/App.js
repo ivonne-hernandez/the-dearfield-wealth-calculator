@@ -6,7 +6,9 @@ class App extends Component {
   constructor() { 
     super();
     this.state = {
-
+      homePrice: null,
+      downPaymentContribution: null,
+      dearfieldFundContribution: null
     }
   }
   render = () => {
