@@ -96,6 +96,9 @@ class CalculatorForm extends Component {
           onClick={(event) => this.handleSubmit(event)}>
           Calculate My Total Wealth
         </button>
+        <div className='missing-input-message-container'>
+          {this.state.displayMissingInput ? this.displayMissingInputMessage() : null}
+        </div>
       </form>
     );
 
