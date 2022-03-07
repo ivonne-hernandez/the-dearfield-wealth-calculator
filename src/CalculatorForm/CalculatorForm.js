@@ -92,7 +92,8 @@ class CalculatorForm extends Component {
           id="dearfieldFundContribution"
           className='dearfield-fund-contribution-input'
           onChange={(event) => this.handleInputChange(event)} />
-        <button className='calculator-form-button'>
+        <button className='calculator-form-button'
+          onClick={(event) => this.handleSubmit(event)}>
           Calculate My Total Wealth
         </button>
       </form>
