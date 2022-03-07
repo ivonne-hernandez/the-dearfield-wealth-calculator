@@ -32,6 +32,20 @@ class CalculatorForm extends Component {
   validateInputs = () => {
     return this.validateHomePriceInput() && this.validateDownPaymentContributionInput() && this.validateDearfieldFundContribution();
   }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.setState({ displayMissingInput: true });
+  
+    if (this.validateInputs()) {
+      this.setState({ displayMissingInput: false });
+      const homePrice = this.state.homePrice;
+      const downPayment = this.state.downPaymentContribution;
+      const dearfieldFundContribution = this.state.dearfieldFundContribution;
+      this.props.setCalculatorInputs(homePrice, downPayment, dearfieldFundContribution);
+    }
+  }
+
   render = () => {
     return (
       <form className='calculator-form'>
