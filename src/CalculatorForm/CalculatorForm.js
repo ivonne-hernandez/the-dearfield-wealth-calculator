@@ -5,9 +5,9 @@ class CalculatorForm extends Component {
   constructor() {
     super();
     this.state = {
-      homePrice: null,
-      downPaymentContribution: null,
-      dearfieldFundContribution: null,
+      homePrice: 0,
+      downPaymentContribution: 0,
+      dearfieldFundContribution: 0,
       displayMissingInput: false
     }
   }
