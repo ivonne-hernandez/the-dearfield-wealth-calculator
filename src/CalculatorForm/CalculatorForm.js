@@ -11,6 +11,9 @@ class CalculatorForm extends Component {
       displayMissingInput: false
     }
   }
+  handleInputChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  }
   render = () => {
     return (
       <form className='calculator-form'>
