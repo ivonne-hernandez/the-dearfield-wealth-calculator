@@ -46,6 +46,17 @@ class CalculatorForm extends Component {
     }
   }
 
+  displayMissingInputMessage = () => {
+    if (!this.validateHomePriceInput()) {
+      return <p className="missing-input-message">*Home Value must be greater than $0 and not exceed $600,000</p>
+    } else if (!this.validateDownPaymentContributionInput()) {
+      return <p className="missing-input-message">*Down Payment Value must be greater than $0 and be at least 3% of home price</p>
+    } else if (!this.validateDearfieldFundContribution()) {
+      return <p className="missing-input-message">*The Dearfield Fund Value must be greater than $0 and not exceed $40,000 or 17% of the homes overall value
+      </p>
+    }
+  }
+
   render = () => {
     return (
       <form className='calculator-form'>
