@@ -11,8 +11,25 @@ class CalculatorForm extends Component {
       displayMissingInput: false
     }
   }
+
   handleInputChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  validateHomePriceInput = () => {
+    return this.state.homePrice <= 600000;
+  }
+
+  validateDownPaymentContributionInput = () => {
+    return this.state.downPaymentContribution >= this.state.homePrice * 0.03;
+  }
+
+  validateDearfieldFundContribution = () => {
+    return this.state.dearfieldFundContribution <= 40000 || this.state.dearfieldFundContribution * (this.state.homePrice * 0.17);
+  }
+
+  validateInputs = () => {
+    return this.validateHomePriceInput() && this.validateDownPaymentContributionInput() && this.validateDearfieldFundContribution();
   }
   render = () => {
     return (
