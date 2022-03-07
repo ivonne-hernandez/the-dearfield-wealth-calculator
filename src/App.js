@@ -11,11 +11,20 @@ class App extends Component {
       dearfieldFundContribution: null
     }
   }
+
+  setCalculatorInputs = (submittedHomePrice, submittedDownPmt, submittedFundContribution) => {
+    this.setState({
+      homePrice: submittedHomePrice,
+      downPaymentContribution: submittedDownPmt,
+      dearfieldFundContribution: submittedFundContribution
+    });
+  }
+
   render = () => {
     return (
       <div>
         <h1>The Dearfield Wealth Calculator</h1>
-        <CalculatorForm />
+        <CalculatorForm setCalculatorInputs={this.setCalculatorInputs} />
       </div>
     );
   }
