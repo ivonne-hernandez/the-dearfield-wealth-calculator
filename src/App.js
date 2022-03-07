@@ -1,11 +1,22 @@
+import { Component } from 'react';
+import CalculatorForm from './CalculatorForm/CalculatorForm';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-     <h1>The Dearfield Wealth Calculator</h1>
-    </div>
-  );
+class App extends Component {
+  constructor() { 
+    super();
+    this.state = {
+
+    }
+  }
+  render = () => {
+    return (
+      <div>
+        <h1>The Dearfield Wealth Calculator</h1>
+        <CalculatorForm />
+      </div>
+    );
+  }
 }
 
 export default App;
