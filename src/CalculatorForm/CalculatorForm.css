@@ -1,0 +1,12 @@
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 20%;
+}
+
+.calculator-form-button {
+  width: 200px;
+}
