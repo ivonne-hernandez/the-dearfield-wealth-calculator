@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import CalculatorForm from './CalculatorForm/CalculatorForm';
+import TotalWealthBreakdown from './TotalWealthBreakdown/TotalWealthBreakdown';
 import './App.css';
 
 class App extends Component {
@@ -14,9 +15,9 @@ class App extends Component {
 
   setCalculatorInputs = (submittedHomePrice, submittedDownPmt, submittedFundContribution) => {
     this.setState({
-      homePrice: submittedHomePrice,
-      downPaymentContribution: submittedDownPmt,
-      dearfieldFundContribution: submittedFundContribution
+      homePrice: Number(submittedHomePrice),
+      downPaymentContribution: Number(submittedDownPmt),
+      dearfieldFundContribution: Number(submittedFundContribution)
     });
   }
 
@@ -25,6 +26,11 @@ class App extends Component {
       <div>
         <h1>The Dearfield Wealth Calculator</h1>
         <CalculatorForm setCalculatorInputs={this.setCalculatorInputs} />
+        <TotalWealthBreakdown 
+          homePrice={this.state.homePrice}
+          downPaymentContribution={this.state.downPaymentContribution}
+          dearfieldFundContribution={this.state.dearfieldFundContribution}
+          />
       </div>
     );
   }
