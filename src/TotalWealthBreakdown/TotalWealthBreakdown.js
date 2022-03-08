@@ -14,7 +14,7 @@ const TotalWealthBreakdown = ({ homePrice, downPaymentContribution, dearfieldFun
         Total Down Payment Brought to Closing: 
       </h4>
       <p className='total-wealth-output'>
-        ${totalDownPaymentOnClosing}
+        ${totalDownPaymentOnClosing.toFixed(2)}
       </p>
       <h4 className='total-wealth-output-title'>
         Estimated Home Appreciation in 10 years: 
@@ -24,7 +24,7 @@ const TotalWealthBreakdown = ({ homePrice, downPaymentContribution, dearfieldFun
       </p>
       <h4>Down Payment Assistance Repaid to The Dearfield Fund:</h4>
       <p className='total-wealth-output'>
-        ${dearfieldFundContribution}
+        ${dearfieldFundContribution ? dearfieldFundContribution.toFixed(2) : '0.00'}
       </p>
       <h4>Five of My Home's 10-Year Appreciation Paid to The Dearfield Fund:</h4>
       <p className='total-wealth-output'>
