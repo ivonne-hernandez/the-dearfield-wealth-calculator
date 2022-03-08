@@ -5,9 +5,9 @@ class CalculatorForm extends Component {
   constructor() {
     super();
     this.state = {
-      homePrice: '',
-      downPaymentContribution: '',
-      dearfieldFundContribution: '',
+      homePrice: 0,
+      downPaymentContribution: 0,
+      dearfieldFundContribution: 0,
       displayMissingInput: false
     }
   }
@@ -17,16 +17,16 @@ class CalculatorForm extends Component {
   }
 
   validateHomePriceInput = () => {
-    return this.state.homePrice <= 600000 && !this.state.homePrice;
+    return this.state.homePrice <= 600000 && this.state.homePrice > 0;
   }
 
   validateDownPaymentContributionInput = () => {
-    return this.state.downPaymentContribution >= (this.state.homePrice * 0.03) && !this.state.downPaymentContribution;
+    return this.state.downPaymentContribution >= (this.state.homePrice * 0.03) && this.state.downPaymentContribution > 0;
   }
 
   validateDearfieldFundContribution = () => {
-    return (this.state.dearfieldFundContribution <= 40000 && !this.state.dearfieldFundContribution)
-      || (this.state.dearfieldFundContribution * this.state.homePrice * 0.17 && !this.state.dearfieldFundContribution);
+    return (this.state.dearfieldFundContribution <= 40000 && this.state.dearfieldFundContribution > 0)
+      || (this.state.dearfieldFundContribution * this.state.homePrice * 0.17 && this.state.dearfieldFundContribution > 0);
   }
 
   validateInputs = () => {
