@@ -10,3 +10,8 @@ input {
 .calculator-form-button {
   width: 200px;
 }
+
+.missing-input-message-container {
+  height: 30px;
+  color: red;
+}
