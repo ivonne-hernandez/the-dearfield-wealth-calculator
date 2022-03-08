@@ -23,8 +23,8 @@ class App extends Component {
 
   render = () => {
     return (
-      <div>
-        <h1>The Dearfield Wealth Calculator</h1>
+      <div className='app-container'>
+        <h1 className='app-header'>The Dearfield Wealth Calculator</h1>
         <CalculatorForm setCalculatorInputs={this.setCalculatorInputs} />
         <TotalWealthBreakdown 
           homePrice={this.state.homePrice}
