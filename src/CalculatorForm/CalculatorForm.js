@@ -70,7 +70,6 @@ class CalculatorForm extends Component {
           id="homePrice"
           className='home-price-input'
           onChange={(event) => this.handleInputChange(event)} />
-        
         <label className='calculator-form-label' htmlFor='downPaymentContribution'>
           My Down Payment Contribution:
         </label>
@@ -81,7 +80,6 @@ class CalculatorForm extends Component {
           id="downPaymentContribution"
           className='down-payment-input'
           onChange={(event) => this.handleInputChange(event)} />
-        
         <label className='calculator-form-label' htmlFor='dearfieldFundContribution'>
           Dearfield Fund Contribution:
         </label>
@@ -101,7 +99,6 @@ class CalculatorForm extends Component {
         </div>
       </form>
     );
-
   }
 }
 
