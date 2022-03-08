@@ -26,7 +26,7 @@ class CalculatorForm extends Component {
 
   validateDearfieldFundContribution = () => {
     return (this.state.dearfieldFundContribution <= 40000 && this.state.dearfieldFundContribution !== 0)
-      || (this.state.dearfieldFundContribution * (this.state.homePrice * 0.17) && this.state.dearfieldFundContribution !== 0);
+      || (this.state.dearfieldFundContribution * this.state.homePrice * 0.17 && this.state.dearfieldFundContribution !== 0);
   }
 
   validateInputs = () => {
