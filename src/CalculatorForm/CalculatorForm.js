@@ -52,7 +52,7 @@ class CalculatorForm extends Component {
     } else if (!this.validateDownPaymentContributionInput()) {
       return <p className="missing-input-message">*Down Payment Value must be greater than $0 and be at least 3% of home price</p>
     } else if (!this.validateDearfieldFundContribution()) {
-      return <p className="missing-input-message">*The Dearfield Fund Value must be greater than $0 and not exceed $40,000 or 17% of the homes overall value
+      return <p className="missing-input-message">*The Dearfield Fund Value must be greater than $0 and not exceed $40,000 or 17% of the home's overall value
       </p>
     }
   }
